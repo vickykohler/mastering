@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from app.bakuage.com/cordova.js by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Jun 2024 05:50:54 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AI Mastering Dashboard</title>
+
+  <!--for security-->
+  <meta name="referrer" content="never">
+  <meta name="referrer" content="no-referrer">
+  <meta name="referrer" content="origin">
+
+  <!--open graph-->
+  <meta name="description" content="音圧爆上げくんは、ワンタッチで好きな音源の音圧を上げることが出来る、自動マスタリングサービスです！動画アップロード用の音源を手軽に作りたい方や、DTMでうまく音圧を上げられなくて悩んでいる方は、是非お試しください！">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="音圧爆上げくん">
+  <meta property="og:title" content="音圧爆上げくん - 自動マスタリングサービス">
+  <meta property="og:description" content="音圧爆上げくんは、ワンタッチで好きな音源の音圧を上げることが出来る、自動マスタリングサービスです！動画アップロード用の音源を手軽に作りたい方や、DTMでうまく音圧を上げられなくて悩んでいる方は、是非お試しください！">
+  <meta property="og:image" content="../bakuage.com/images/bakuage/bakuage.png">
+  <meta property="og:url" content="https://bakuage.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="音圧爆上げくん - 自動マスタリングサービス">
+  <meta name="twitter:description" content="音圧爆上げくんは、ワンタッチで好きな音源の音圧を上げることが出来る、自動マスタリングサービスです！動画アップロード用の音源を手軽に作りたい方や、DTMでうまく音圧を上げられなくて悩んでいる方は、是非お試しください！" />
+  <meta name="twitter:image" content="../bakuage.com/images/bakuage/bakuage.png">
+  <meta name="twitter:site" content="@bakuagecom">
+  <meta name="twitter:creator" content="@bakuagecom" />
+
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: blob: cdvfile: filesystem: 'unsafe-inline' 'unsafe-eval';">
+
+  <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:; ">-->
+  <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://aimastering.com https://bakuage.com *.stripe.com *.paypal.com *.twitter.com *.disqus.com; img-src *; media-src *;">-->
+
+  <!--force reload (リロードが効かない場合の保険)-->
+  <script>
+    fetch(location.href, {
+      cache: 'reload',
+    });
+  </script>
+
+  <!--load cordova if exists-->
+  <script src="cordova.html"></script>
+
+  <!--history path support-->
+  <base #href="">
+  <base >
+<!--  <script>-->
+<!--      var BAKUAGE_APP_INITIAL_HREF = location.href;-->
+<!--      (function () {-->
+<!--        var originalUrl = location.protocol + '//' + location.host + location.pathname;-->
+<!--        console.log('originalUrl', originalUrl);-->
+<!--        var baseUrl = '/';-->
+
+<!--        if (window.cordova) {-->
+<!--          // cordova-->
+<!--          // baseをかえるとなぜかbaseに飛んでしまう-->
+<!--          // document.getElementsByTagName('base')[0].href = 'http://192.168.1.27:8080';-->
+<!--          if (originalUrl.match(/\/www/)) {-->
+<!--            baseUrl = originalUrl.replace(/\/www(?!.*\/www).*/, '/www/'); // last only-->
+<!--          }-->
+<!--          console.log('base href', baseUrl);-->
+<!--          document.getElementsByTagName('base')[0].href = baseUrl;-->
+<!--        } else {-->
+<!--          // electron or web-->
+<!--          if (originalUrl.match(/\/app/)) {-->
+<!--            baseUrl = originalUrl.replace(/\/app.*/, '/app/');-->
+<!--          }-->
+<!--          console.log('base href', baseUrl);-->
+<!--          document.getElementsByTagName('base')[0].href = baseUrl;-->
+<!--        }-->
+<!--      })();-->
+<!--  </script>-->
+
+  <!--old-->
+  <link type="image/vnd.microsoft.icon" rel="shortcut icon" href="dist/icon_light_blue.png">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />-->
+  <link rel="stylesheet" href="dist/builda03c.css?v=BAKUAGE_CLIENT_WEB_VERSION">
+
+  <!--&lt;!&ndash; Bootstrap&ndash;&gt;-->
+  <!--<link href="dist/template/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+  <!--&lt;!&ndash;Common Plugins CSS &ndash;&gt;-->
+  <!--<link href="dist/template/css/plugins/plugins.css" rel="stylesheet">-->
+  <!--&lt;!&ndash;fonts&ndash;&gt;-->
+  <!-- 相対パスの問題があるのでここで読み込む -->
+  <link href="dist/template/lib/line-icons/line-icons.css" rel="stylesheet">
+  <link href="dist/template/lib/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+  <!--<link href="dist/template/lib/chartist/chartist.min.css" rel="stylesheet" />-->
+  <!--<link href="dist/template/css/chartist-custom.css" rel="stylesheet" />-->
+  <!--&lt;!&ndash; jvectormap &ndash;&gt;-->
+  <!--<link href="dist/template/lib/vector-map/jquery-jvectormap-2.0.2.css" rel="stylesheet" />-->
+  <!--<link href="dist/template/css/style.css" rel="stylesheet">-->
+</head>
+<body class="layout-fixed">
+
+<!--vue-->
+<div id="mount-root"></div>
+
+<!--https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined-->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!--template js-->
+<script type="text/javascript" src="dist/template/js/plugins/plugins.js"></script>
+<script type="text/javascript" src="dist/template/js/appUi-custom.js"></script>
+
+<script>if (window.module) module = window.module;</script>
+
+<!--js-->
+<script src="https://js.stripe.com/v3/" type="text/javascript"></script>
+<script src="configa03c.js?v=BAKUAGE_CLIENT_WEB_VERSION" type="text/javascript"></script>
+<script src="dist/builda03c.js?v=BAKUAGE_CLIENT_WEB_VERSION" type="text/javascript"></script>
+
+<!--license-->
+<div style="display: none">
+  <a href="dist/licenses.txt">licenses of dependent libraries</a>
+  <pre>
+    https://github.com/jimmywarting/FormData/blob/master/LICENSE
+
+MIT License
+
+Copyright (c) 2016 Jimmy Karl Roland Wärting
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+  </pre>
+</div>
+
+</body>
+
+<!-- Mirrored from app.bakuage.com/cordova.js by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Jun 2024 05:50:54 GMT -->
+</html>
